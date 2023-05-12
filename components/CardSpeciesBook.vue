@@ -15,7 +15,7 @@
           {{especie.indicador_subespecie}}
           <i>{{especie.subespecie}}</i>
           {{especie.autor}}</h3>
-          <h4 class="indice__tarjeta__header__liga__familia">{{especie.familia}}</h4>
+          <h4 class="indice__tarjeta__header__liga__familia" style="color:white !important;">{{especie.familia}}</h4>
         </div>
       </nuxt-link>
     </div>
