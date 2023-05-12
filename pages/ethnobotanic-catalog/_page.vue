@@ -77,9 +77,10 @@
         </div>
         <div class="menu-flotante-body">
           <nuxt-link 
+          class="menu-flotante-body__liga-vista-lista"
             v-for="especieItem in speciesDataset"
             :key="especieItem.nombre_cientifico"
-            to="ethnobotanic-catalog/Pseudobombax%20ellipticum">
+            to="/ethnobotanic-catalog/Pseudobombax%20ellipticum">
             <div class="menu-flotante-body__data-container-vista-lista">
               <h3 class="menu-flotante-body__liga__titulo-vista-lista">
                 <i>{{especieItem.nombre_cientifico}}</i> {{especieItem.indicador_subespecie}}
@@ -100,6 +101,9 @@
         <span class="material-icons-sharp">keyboard_arrow_right</span>
       </div>
     </aside>
+    <footer class="">
+
+</footer>
     <audio ref="audio" :src="getAudioUrl()">Download audio</audio>
   </div>
 </template>
