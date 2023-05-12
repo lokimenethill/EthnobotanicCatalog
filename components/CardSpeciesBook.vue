@@ -4,18 +4,17 @@
       <!-- :TODO FALTA AGREGAR I18N A LOS LINKS  -->
       <nuxt-link 
         to="/ethnobotanic-catalog/Pseudobombax%20ellipticum" 
-        :class="[isGrid ? 'indice__tarjeta__header__liga'
-        : 'indice__tarjeta__header__liga-vista-lista']">
+        :href="especie.pagina_url" :class="[isGrid ? 'indice__tarjeta__header__liga' : 'indice__tarjeta__header__liga-vista-lista']">
         <img 
-          :class="[isGrid ? 'indice__tarjeta__header__liga__img' : 'oculto']" 
+          :class="[isGrid ? 'indice__tarjeta__header__liga__img' : 'oculto']"
           :src="especie.miniatura_img_url" alt="Imagen 1 a 1">
         <div :class="[isGrid ? 'indice__tarjeta__header__data-container' : 'indice__tarjeta__header__data-container-vista-lista']">
-          <h3 :class="[isGrid ? 'indice__tarjeta__header__liga__titulo' : 'indice__tarjeta__header__liga__titulo-vista-lista']">
+          <h3 :class="[isGrid ? 'indice__tarjeta__header__liga__titulo' : 'indice__tarjeta__header__liga__titulo-vista-lista']   ">
           <i>{{especie.nombre_cientifico}}</i>
           {{especie.indicador_subespecie}}
           <i>{{especie.subespecie}}</i>
           {{especie.autor}}</h3>
-          <h4 class="indice__tarjeta__header__liga__familia" style="color:white !important;">{{especie.familia}}</h4>
+          <h4 class="indice__tarjeta__header__liga__familia" :style="[isGrid ? {color: c1} : {color:c2}  ]" >{{especie.familia}}</h4>
         </div>
       </nuxt-link>
     </div>
@@ -38,6 +37,8 @@ export default {
   // 1.3 Definir data del componente
   data() {
     return {
+      c1:"white",
+      c2:"black",
       especie: {},
     };
   },
