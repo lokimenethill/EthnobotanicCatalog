@@ -20,5 +20,9 @@
     "@nuxtjs/vuetify": "^1.12.3",
     "eslint-config-prettier": "^8.5.0",
     "prettier": "^2.7.1"
+  },
+  "engines": {
+    "node": "19.9.0",
+    "npm": "9.6.6"
   }
 }
